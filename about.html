@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <script src="script.js"></script>
+      <div class="container">
+        <div class="header">
+            <h1><b>Programming Quiz Challenge</b></h1>
+            <p>Test your knowledge across multiple programming languages</p>
+        </div>
+
+        <div class="start-screen active">
+            <div style="text-align: center; padding: 40px 20px;">
+                <h2 style="color: #333; margin-bottom: 20px;">Ready to test your <strong>programming</strong> skills?</h2>
+                <p style="color: #666; margin-bottom: 30px; line-height: 1.8;">
+                    This quiz contains 50 questions covering JavaScript, Python and general programming concepts.
+                    <br>Choose your answers carefully and see how you rank!
+                </p>
+                <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+            </div>
+        </div>
+
+        <div class="quiz-screen">
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label">Question</div>
+                    <div class="stat-value"><span id="current-question">1</span>/<span id="total-questions">50</span></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="current-score">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Correct</div>
+                    <div class="stat-value" id="correct-count">0</div>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+
+            <div class="question-container">
+                <div class="category-info" id="category">JavaScript</div>
+                <div class="question" id="question">Question will appear here</div>
+                <div class="options" id="options">
+                
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-secondary" onclick="skipQuestion()">Skip</button>
+                <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <div class="result-screen">
+            <div class="result-summary">
+                <div class="score-circle">
+                    <div class="score-text" id="final-score">0%</div>
+                </div>
+                <div class="result-message" id="result-message">Great job!</div>
+                
+                <div class="result-details">
+                    <div class="detail-card">
+                        <div class="detail-label">Correct Answers</div>
+                        <div class="detail-value" id="final-correct">0</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">Wrong Answers</div>
+                        <div class="detail-value" id="final-wrong">0</div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-label">Skipped</div>
+                        <div class="detail-value" id="final-skipped">0</div>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="restartQuiz()">Take Quiz Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
