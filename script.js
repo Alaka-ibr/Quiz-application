@@ -316,7 +316,7 @@ let correctAnswers = 0;
 let wrongAnswers = 0;
 let skippedQuestions = 0;
 let selectedAnswer = null;
-
+ 
 function startQuiz() {
     document.querySelector('.start-screen').classList.remove('active');
     document.querySelector('.quiz-screen').classList.add('active');
@@ -435,3 +435,4 @@ function restartQuiz() {
     document.querySelector('.result-screen').classList.remove('active');
     document.querySelector('.start-screen').classList.add('active');
 }
+// submit Button.addEventListener ('click', showResults);
