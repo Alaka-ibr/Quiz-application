@@ -316,7 +316,7 @@ let correctAnswers = 0;
 let wrongAnswers = 0;
 let skippedQuestions = 0;
 let selectedAnswer = null;
- 
+
 function startQuiz() {
     document.querySelector('.start-screen').classList.remove('active');
     document.querySelector('.quiz-screen').classList.add('active');
@@ -387,6 +387,7 @@ function nextQuestion() {
     }, 1000);
 }
 
+
 function skipQuestion() {
     skippedQuestions++;
     currentQuestionIndex++;
@@ -424,6 +425,7 @@ function showResults() {
     document.getElementById('result-message').textContent = message;
 }
 
+
 function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
@@ -435,4 +437,3 @@ function restartQuiz() {
     document.querySelector('.result-screen').classList.remove('active');
     document.querySelector('.start-screen').classList.add('active');
 }
-// submit Button.addEventListener ('click', showResults);
